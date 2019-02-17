@@ -1,4 +1,8 @@
 # -*- coding:utf-8 -*-
+"""
+    Author: Thinkgamer
+    Desc: 数据预处理
+"""
 import pandas
 import re
 import random

@@ -11,8 +11,6 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
 from sklearn.metrics import mean_squared_error
-from sklearn.externals import joblib
-
 
 class Model:
     def __init__(self):
@@ -20,7 +18,7 @@ class Model:
         self.train_data, self.test_data = self._split_data()
         self.gbdt = self._train_model()
 
-    # load data
+    # 加载数据
     def _load_data(self):
         if os.path.exists("./data/train.txt"):
             print("训练模型数据准备完毕,路径为：./data/train.txt")
@@ -91,6 +89,6 @@ if __name__ == "__main__":
     model = Model()
     model._evalute_model()
     # 保存模型
-    joblib.dump(model.gbdt, './model/gbdt.model')
+    # joblib.dump(model.gbdt, './model/gbdt.model')
     # 加载模型
     # joblib.load('./model/gbdt.model')
